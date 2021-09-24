@@ -1,0 +1,27 @@
+{{template "base" .}}
+
+{{define "title"}}Books page{{end}}
+
+{{define "main"}}
+    <h1>Books</h1>
+    <table border="1" width="100%" spacespacing="2">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .Users}}
+            <tr>
+                <td>{{.ID}}</td>
+                <td>{{.FirstName}}</td>
+                <td>{{.LastName}}</td>
+                <td>{{.Email}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+{{end}}
